@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <title>animation</title>
     <style>
-        @keyframes roate_360 {
+        @keyframes roate_90 {
+            50% {
+                transform: rotate(-90deg);
+            }
             100% {
-                transform: rotate(360deg);
+                transform: rotate(90deg);
             }
         }
 
         img {
-            animation-name: roate_360;
+            animation-name: roate_90;
             animation-duration: 1s;
             animation-iteration-count: infinite;
         }
@@ -20,6 +23,6 @@
 <body>
 <h3>어지러워요</h3>
 <hr>
-<img src="../../media/spongebob.png">
+<img src="../images/spongeboob.png">
 </body>
 </html>
