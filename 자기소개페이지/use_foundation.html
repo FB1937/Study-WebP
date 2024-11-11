@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개 페이지</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+  <style>
+    body {
+      background: linear-gradient(45deg, #1e90ff, #ff6347); /* 파랑색과 빨강색 그라데이션 */
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .header, .profile-slide, .sns-section, .code-section {
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .profile-slide img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .sns-links a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5em;
+    }
+    .code-section {
+      background-color: #333;
+      color: #eee;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <section class="header">
+    <h1>안녕하세요, 저는 [이름]입니다!</h1>
+    <p>프론트엔드 개발자이며, 웹 디자인을 즐깁니다.</p>
+  </section>
+
+  <!-- Profile Image Slide Section -->
+  <section class="profile-slide">
+    <h2>프로필 이미지</h2>
+    <div class="orbit" role="region" aria-label="Profile Images" data-orbit>
+      <ul class="orbit-container">
+        <li class="is-active orbit-slide">
+          <img src="https://via.placeholder.com/300" alt="Profile Image 1">
+        </li>
+        <li class="orbit-slide">
+          <img src="https://via.placeholder.com/300" alt="Profile Image 2">
+        </li>
+        <li class="orbit-slide">
+          <img src="https://via.placeholder.com/300" alt="Profile Image 3">
+        </li>
+      </ul>
+      <nav class="orbit-bullets">
+        <button class="is-active" data-slide="0"></button>
+        <button data-slide="1"></button>
+        <button data-slide="2"></button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- SNS Section -->
+  <section class="sns-section">
+    <h2>나를 찾아보세요</h2>
+    <div class="sns-links">
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+  </section>
+
+  <!-- Code Display Section -->
+  <section class="code-section">
+    <h2>페이지 코드</h2>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ko"&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+          &lt;title&gt;자기소개 페이지&lt;/title&gt;
+          &lt;!-- Foundation CSS 및 커스텀 스타일링 --&gt;
+          &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"&gt;
+          &lt;style&gt;...&lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;!-- Header Section --&gt;
+          &lt;section class="header"&gt;
+            &lt;h1&gt;안녕하세요, 저는 [이름]입니다!&lt;/h1&gt;
+          &lt;/section&gt;
+
+          &lt;!-- Profile Image Slide Section --&gt;
+          &lt;section class="profile-slide"&gt;
+            &lt;div class="orbit" role="region" data-orbit&gt;
+              &lt;ul class="orbit-container"&gt;
+                &lt;li class="orbit-slide"&gt;...&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;!-- SNS Section --&gt;
+          &lt;section class="sns-section"&gt;
+            &lt;div class="sns-links"&gt; ... &lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;!-- Code Display Section --&gt;
+          &lt;section class="code-section"&gt; ... &lt;/section&gt;
+
+          &lt;!-- Foundation JavaScript --&gt;
+          &lt;script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"&gt;&lt;/script&gt;
+          &lt;script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"&gt;&lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

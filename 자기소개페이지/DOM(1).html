@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개 페이지</title>
+  <style>
+    /* 파랑색과 빨강색 배경 그라데이션과 흰색 텍스트 */
+    body {
+      background: linear-gradient(135deg, #1e90ff, #ff6347);
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .intro-section {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.4); /* 투명한 배경 */
+    }
+    .intro-section h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .intro-section p {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // 자기소개 섹션을 생성하는 함수
+    function createIntroSection() {
+      // 컨테이너 섹션 생성
+      const introSection = document.createElement('section');
+      introSection.className = 'intro-section';
+
+      // 제목 생성
+      const heading = document.createElement('h1');
+      heading.textContent = '안녕하세요, 저는 [이름]입니다!';
+      introSection.appendChild(heading);
+
+      // 설명 문구 생성
+      const paragraph = document.createElement('p');
+      paragraph.textContent = '프론트엔드 개발자이며, 웹 디자인과 사용자 경험에 열정을 가지고 있습니다.';
+      introSection.appendChild(paragraph);
+
+      // 섹션을 body에 추가
+      document.body.appendChild(introSection);
+    }
+
+    // 함수 호출하여 자기소개 섹션 생성
+    createIntroSection();
+  </script>
+</body>
+</html>

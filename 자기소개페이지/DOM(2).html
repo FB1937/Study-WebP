@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개 페이지</title>
+  <style>
+    /* 배경과 텍스트 스타일 */
+    body {
+      background: linear-gradient(135deg, #1e90ff, #ff6347);
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      text-align: center;
+    }
+    .intro-section {
+      background: rgba(0, 0, 0, 0.5); /* 투명 배경 */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px;
+      width: 80%;
+      max-width: 500px;
+    }
+    h1, h2, p {
+      margin: 10px 0;
+    }
+    /* 버튼 스타일 */
+    .change-bg-btn {
+      background: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 배경색 변경 버튼 -->
+  <button class="change-bg-btn" onclick="changeBackgroundColor()">배경색 바꾸기</button>
+
+  <script>
+    // 배경색 변경 함수
+    function changeBackgroundColor() {
+      const colors = ["#1e90ff", "#ff6347", "#4CAF50", "#FFC107", "#9C27B0"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.background = `linear-gradient(135deg, ${randomColor}, #333)`;
+    }
+
+    // 자기소개 섹션을 추가하는 함수
+    function createIntroSections() {
+      // 각 섹션에 대한 정보를 배열로 정리
+      const sectionsInfo = [
+        {
+          title: "안녕하세요, 저는 [이름]입니다!",
+          content: "프론트엔드 개발자이며, 웹 디자인과 사용자 경험에 열정을 가지고 있습니다."
+        },
+        {
+          title: "나의 직업",
+          content: "저는 주로 웹 애플리케이션 개발을 하고 있으며, UI/UX 개선을 통해 사용자 친화적인 환경을 만드는 것을 좋아합니다."
+        },
+        {
+          title: "나의 취미",
+          content: "여가 시간에는 독서와 여행을 즐기며, 새로운 곳에서 영감을 얻곤 합니다."
+        }
+      ];
+
+      // 각 섹션을 순회하며 DOM에 추가
+      sectionsInfo.forEach(section => {
+        const introSection = document.createElement('section');
+        introSection.className = 'intro-section';
+
+        const heading = document.createElement('h2');
+        heading.textContent = section.title;
+        introSection.appendChild(heading);
+
+        const paragraph = document.createElement('p');
+        paragraph.textContent = section.content;
+        introSection.appendChild(paragraph);
+
+        document.body.appendChild(introSection);
+      });
+    }
+
+    // 함수 호출하여 소개 섹션 생성
+    createIntroSections();
+  </script>
+</body>
+</html>

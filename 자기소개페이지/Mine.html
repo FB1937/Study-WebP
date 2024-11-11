@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개 페이지</title>
+   <!-- Bulma CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+   <!-- Font Awesome for icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <!-- Carousel Library CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+   <!-- Foundation CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+  <style>
+    body {
+      background: linear-gradient(45deg, #1e90ff, #ff6347); /* 파랑색과 빨강색 그라데이션 */
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .header, .profile-slide, .sns-section, .code-section {
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .profile-slide img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .sns-links a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5em;
+    }
+    .code-section {
+      background-color: #333;
+      color: #eee;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <section class="header">
+    <h1>안녕하세요, 저는 [이름]입니다!</h1>
+  </section>
+
+  <!-- Profile Image Slide Section -->
+  <section class="profile-slide">
+    <h2>프로필 이미지</h2>
+    <div class="orbit" role="region" aria-label="Profile Images" data-orbit>
+      <ul class="orbit-container">
+        <li class="is-active orbit-slide">
+          <img src="https://via.placeholder.com/300" alt="Profile Image 1">
+        </li>
+        <li class="orbit-slide">
+          <img src="https://via.placeholder.com/300" alt="Profile Image 2">
+        </li>
+        <li class="orbit-slide">
+          <img src="https://via.placeholder.com/300" alt="Profile Image 3">
+        </li>
+      </ul>
+      <nav class="orbit-bullets">
+        <button class="is-active" data-slide="0"></button>
+        <button data-slide="1"></button>
+        <button data-slide="2"></button>
+      </nav>
+      <div class="content has-text-centered mt-5">
+        <p>저는 웹 개발에 열정을 가진 개발자입니다. 프론트엔드와 백엔드 모두에 관심이 있으며, 최신 기술을 배우고 적용하는 것을 즐깁니다.</p>
+    </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section">
+    <div class="container">
+        <h2 class="title has-text-centered">Skills</h2>
+        <div class="columns">
+            <div class="column">
+                <div class="box" style="background-color: rgba(255, 255, 255, 0.1); color: white;">
+                    <h3 class="title is-5">HTML & CSS</h3>
+                    <p>반응형 웹 디자인과 최신 CSS를 사용한 페이지 레이아웃 작성.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="box" style="background-color: rgba(255, 255, 255, 0.1); color: white;">
+                    <h3 class="title is-5">JavaScript</h3>
+                    <p>인터랙티브 기능 구현 및 Vue.js를 통한 프론트엔드 개발 경험.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="box" style="background-color: rgba(255, 255, 255, 0.1); color: white;">
+                    <h3 class="title is-5">Python</h3>
+                    <p>데이터 분석 및 간단한 백엔드 개발, Flask 사용 경험.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="section">
+    <div class="container has-text-centered">
+        <h2 class="title">Follow Me on Social Media</h2>
+        <p>제 SNS 계정을 통해 최신 소식을 받아보세요!</p>
+        <div class="buttons is-centered mt-4">
+            <a href="https://www.instagram.com/nooheadx/" target="_blank" class="button is-info is-rounded">
+                <span class="icon"><i class="fab fa-instagram"></i></span>
+                <span>Instagram</span>
+            </a>
+            <a href="https://github.com/FB1937" target="_blank" class="button is-info is-rounded">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="button is-info is-rounded">
+                <span class="icon"><i class="fab fa-linkedin"></i></span>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section">
+    <div class="container">
+        <h2 class="title has-text-centered">Contact Me</h2>
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <form>
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Your Name">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Your Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button type="submit" class="button is-info is-fullwidth">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Code Display Section -->
+  <section class="code-section">
+    <h2>페이지 코드</h2>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ko"&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+          &lt;title&gt;자기소개 페이지&lt;/title&gt;
+          &lt;!-- Foundation CSS 및 커스텀 스타일링 --&gt;
+          &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"&gt;
+          &lt;style&gt;...&lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;!-- Header Section --&gt;
+          &lt;section class="header"&gt;
+            &lt;h1&gt;안녕하세요, 저는 [이름]입니다!&lt;/h1&gt;
+          &lt;/section&gt;
+
+          &lt;!-- Profile Image Slide Section --&gt;
+          &lt;section class="profile-slide"&gt;
+            &lt;div class="orbit" role="region" data-orbit&gt;
+              &lt;ul class="orbit-container"&gt;
+                &lt;li class="orbit-slide"&gt;...&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;!-- SNS Section --&gt;
+          &lt;section class="sns-section"&gt;
+            &lt;div class="sns-links"&gt; ... &lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;!-- Code Display Section --&gt;
+          &lt;section class="code-section"&gt; ... &lt;/section&gt;
+
+          &lt;!-- Foundation JavaScript --&gt;
+          &lt;script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"&gt;&lt;/script&gt;
+          &lt;script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"&gt;&lt;/script&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="background: linear-gradient(45deg, #1e90ff, #ff6347);">
+    <div class="content has-text-centered">
+        <p>&copy; 2024 최대훈. All Rights Reserved.</p>
+    </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
