@@ -4,10 +4,6 @@
 - 공식 웹사이트 : http://webprogramming.co.kr/
 - 코드 오류 및 제안: [Issues](https://github.com/riverallzero/WebProgramming/issues)
 
-<div align="center" style="display:flex;">
-  <img src='.asset/book.jpg' width="250"/>
-</div>
-
 ## Contents
 - [C02: HTML5 기본 문서 만들기](https://github.com/FB1937/Study-WebP/tree/master/0924/2%EC%9E%A5)
 - [C03: HTML5 문서 구조화와 웹 폼](https://github.com/FB1937/Study-WebP/tree/master/0924/3%EC%9E%A5)
