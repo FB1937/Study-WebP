@@ -1,0 +1,196 @@
+/* 전체 배경 */
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+    color: white;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 헤더 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 120px;
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* 섹션 기본 스타일 */
+main {
+    padding-top: 100px; /* 고정된 헤더 공간 확보 */
+    padding-bottom: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #ccc;
+    text-align: center;
+}
+
+/* 카드 섹션 */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: linear-gradient(to right, #222, #333);
+    border-radius: 10px;
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 65, 108, 0.5);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #ff416c;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 16px;
+}
+
+.service-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* 애니메이션 */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* iframe 섹션 */
+.iframe-container {
+    margin: 20px auto;
+    max-width: 100%;
+    height: 80vh;
+    border: 2px solid #ff416c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(255, 65, 108, 0.5);
+}
+
+.responsive-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #bbb;
+    font-size: 14px;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #ff416c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.ceo-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ceo-card img.ceo-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.ceo-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.ceo-card p {
+    color: #bbb;
+}
